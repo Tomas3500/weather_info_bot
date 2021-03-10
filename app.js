@@ -22,7 +22,6 @@ bot.start((ctx) => ctx.reply(`Привет ${ctx.message.from.first_name}! Уз�
     ])
         .resize()
         .extra()
-    
 ))
 
 bot.on('text', async (ctx) => {
