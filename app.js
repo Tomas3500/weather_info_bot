@@ -46,10 +46,10 @@ bot.on('text', async (ctx) => {
         ctx.reply('Такого города нет')
     }
 })
-// bot.help((ctx) => ctx.reply('Введите город на латинице!'))
-// bot.use((ctx) => {
-//     console.log(ctx.message.first_name)
-// })
+bot.help((ctx) => ctx.reply('Введите город на латинице!'))
+bot.use((ctx) => {
+    console.log(ctx.message.first_name)
+})
 
 bot.launch()
 
