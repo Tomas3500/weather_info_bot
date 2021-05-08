@@ -38,7 +38,7 @@ bot.on('text', async (ctx) => {
                     Скорость ветра: ${data.body.wind.speed} м/с
 
                     Видимость: ${data.body.visibility / 1000} км`
-                ctx.reply(formatDataInfo);
+               ctx.reply(formatDataInfo);
             })
     }
     catch {
@@ -46,10 +46,10 @@ bot.on('text', async (ctx) => {
         ctx.reply('Такого города нет')
     }
 })
-bot.help((ctx) => ctx.reply('Введите город на латинице!'))
-bot.use((ctx) => {
-    console.log(ctx.message.first_name)
-})
+// bot.help((ctx) => ctx.reply('Введите город на латинице!'))
+// bot.use((ctx) => {
+//     console.log(ctx.message.first_name)
+// })
 
 bot.launch()
 
