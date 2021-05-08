@@ -25,7 +25,7 @@ bot.start((ctx) => ctx.reply(`Привет ${ctx.message.from.first_name}! Уз�
 ))
 
 bot.on('text', async (ctx) => {
-    // console.log(ctx.message.from.first_name);
+    console.log(ctx.message.from.first_name);
     try {
         await superagent.get(`http://api.openweathermap.org/data/2.5/weather?q=${ctx.message.text}&appid=395fdbf92bcc5120cad3e5dc85badec6&lang=ru`)
             .then(function (data) {
