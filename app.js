@@ -45,8 +45,9 @@ bot.on('text', async (ctx) => {
         console.log('Ошибка')
         ctx.reply('Такого города нет')
     }
-})
 bot.help((ctx) => ctx.reply('Введите город на латинице!'))
+
+})
 bot.use((ctx) => {
     console.log(ctx.message.first_name)
 })
