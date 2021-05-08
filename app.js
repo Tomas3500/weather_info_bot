@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
 })
-
+bot.help((ctx) => ctx.reply('Введите город на латинице!'))
 bot.start((ctx) => ctx.reply(`Привет ${ctx.message.from.first_name}! Узнай прогноз погоды в твоем городе.
 Введи город на английском языке и узнай, что тебе одеть!)`,
     Markup.keyboard([
@@ -45,9 +45,8 @@ bot.on('text', async (ctx) => {
         console.log('Ошибка')
         ctx.reply('Такого города нет')
     }
-bot.help((ctx) => ctx.reply('Введите город на латинице!'))
-
 })
+
 bot.use((ctx) => {
     console.log(ctx.message.first_name)
 })
